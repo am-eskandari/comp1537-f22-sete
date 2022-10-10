@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #header,
+        #footer {
+            text-align: center;
+          }
+      body {
+        background-color: #f1f1f1;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+        #topnav {
+          background-color: black;
+          overflow: hidden;
+        }
+        #topnav a {
+          color: wheat;
+          text-decoration: none;
+          display: inline-block;
+          width: 100px;
+          padding: 14px 16px;
+          text-align: center;
+        }
+        #topnav a:hover {
+          background-color: wheat;
+          color: black;
+        }
+
+        #left_column {
+          width: 70%;
+          float: left;
+        }
+        #right_column {
+          width: 30%;
+          float: right;
+          margin-bottom: 10px;
+        }
+        .card {
+          background-color: #a2b9bc;
+          padding: 20px;
+          margin-top: 20px;
+        }
+        footer {
+          clear: both;
+          text-align: center;
+        }
+
+        @media screen and (max-width: 600px){
+          section {
+              width: 100%;
+              float: none;
+                   }
+          aside {
+              width: 100%;
+              float: none;
+                  }
+          #lastLink {
+              float: none;
+          }
+    </style>
+  </head>
+
+  <body>
+    <div id="header">
+      <h1>Header</h1>
+      <p>Should be responsive</p>
+    </div>
+
+    <div id="topnav">
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#" style="float: right">Link</a>
+    </div>
+    <main>
+      <div id="left_colum">
+        <div class="card">
+          <h2>Title</h2>
+          <h5>Title Description</h5>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid
+            tenetur optio, numquam culpa ea saepe totam modi necessitatibus
+            rerum ipsum distinctio facere consectetur natus nihil officia omnis
+            ducimus reiciendis quaerat?
+          </p>
+        </div>
+        <div class="card">
+          <h2>Title</h2>
+          <h5>Title Description</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum,
+            sunt. Incidunt, minus molestias labore excepturi velit libero
+            ducimus molestiae minima assumenda, amet eveniet quis quidem quas
+            impedit est? Earum, quaerat!
+          </p>
+        </div>
+      </div>
+      <div id="right_column">
+        <div class="card">
+          <h2>Title</h2>
+          <h5>Title Description</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+            explicabo dolore fuga similique tempore beatae neque adipisci veniam
+            aliquid! Atque corporis error laborum illum enim ipsum vero totam
+            eos quibusdam!
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <h2>Footer</h2>
+    </footer>
+  </body>
+</html>
