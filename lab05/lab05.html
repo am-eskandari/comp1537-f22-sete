@@ -4,131 +4,121 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lab 04</title>
+    <title>Document</title>
     <style>
-      * {
-        box-sizing: border-box;
-      }
-      #header,
-      #footer {
-        text-align: center;
-      }
-      body {
-        background-color: #f1f1f1;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-
-      #topnav {
-        background-color: black;
+      nav {
+        background-color: #333;
         overflow: hidden;
       }
-      #topnav a {
-        color: wheat;
+
+      nav a {
+        display: block;
+        float: left;
+        padding: 10px;
+        color: #f2f2f2;
         text-decoration: none;
-        display: inline-block;
-        width: 100px;
         padding: 14px 16px;
         text-align: center;
       }
-      #topnav a:hover {
-        background-color: wheat;
-        color: black;
+
+      img {
+        width: 100%;
       }
 
-      #left_column {
-        width: 70%;
-        float: left;
-      }
-      #right_column {
+      .img_container {
         width: 30%;
-        float: right;
-        padding-left: 10px;
-        margin-bottom: 10px;
-      }
-      .card {
-        background-color: #a2b9bc;
-        padding: 20px;
-        margin-top: 20px;
-      }
-      #footer {
-        clear: both;
-        text-align: center;
-      }
-      @media screen and (max-width: 600px) {
-        #left_column,
-        #right_column {
-          width: 100%;
-        }
-        #right_column {
-          padding-left: 0px;
-        }
+        float: left;
+        margin-left: calc(10% / 2);
       }
 
-      @media screen and (max-width: 300px) {
-        #topnav a {
-          float: none !important;
+      #centered_div {
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      .text_format {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      @media screen and (max-width: 600px) {
+        .img_container {
+          width: 100%;
+          margin-left: 0;
         }
-        .card img {
+
+        #centered_div {
           width: 100%;
         }
       }
     </style>
   </head>
 
-  <body>
-    <div id="header">
-      <h1>Header</h1>
-      <p>Should be responsive</p>
-    </div>
+  <body class="text_format">
+    <header>
+      <h1>My Website</h1>
+    </header>
+    <nav>
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+      <a href="#">Link 4</a>
+    </nav>
 
-    <div id="topnav">
-      <a href="#">Link</a>
-      <a href="#">Link</a>
-      <a href="#">Link</a>
-      <a href="#" style="float: right">Link</a>
-    </div>
     <main>
-      <div id="left_column">
-        <div class="card">
-          <h2>Title</h2>
-          <h5>Title Description</h5>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid
-            tenetur optio, numquam culpa ea saepe totam modi necessitatibus
-            rerum ipsum distinctio facere consectetur natus nihil officia omnis
-            ducimus reiciendis quaerat?
-          </p>
-        </div>
-        <div class="card">
-          <h2>Title</h2>
-          <h5>Title Description</h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum,
-            sunt. Incidunt, minus molestias labore excepturi velit libero
-            ducimus molestiae minima assumenda, amet eveniet quis quidem quas
-            impedit est? Earum, quaerat!
-          </p>
-          <img src="/images/Gigachad.jpg" width="200px" />
-          <img src="/images/Gigachad.jpg" width="200px" />
-          <img src="/images/Gigachad.jpg" width="200px" />
-          <img src="/images/Gigachad.jpg" width="200px" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+        architecto necessitatibus voluptates, totam nesciunt doloremque illo
+        aperiam quaerat natus sequi corporis excepturi facilis neque sed culpa
+        in. Nobis, placeat possimus!
+      </p>
+
+      <div id="image_row">
+        <div id="centered_div">
+          <div class="img_container" style="margin-left: 0px">
+            <img src="https://picsum.photos/300/200?random=432524534" alt="" />
+          </div>
+          <div class="img_container">
+            <img src="https://picsum.photos/300/200?random=436574698" alt="" />
+          </div>
+          <div class="img_container">
+            <img
+              src="https://picsum.photos/300/200?random=1654798657423"
+              alt=""
+            />
+          </div>
         </div>
       </div>
-      <div id="right_column">
-        <div class="card">
-          <h2>Title</h2>
-          <h5>Title Description</h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
-            explicabo dolore fuga similique tempore beatae neque adipisci veniam
-            aliquid! Atque corporis error laborum illum enim ipsum vero totam
-            eos quibusdam!
-          </p>
+      <!--Image rows-->
+      <div id="image_row">
+        <div id="centered_div">
+          <div class="img_container" style="margin-left: 0px">
+            <img src="https://picsum.photos/300/200?random=0965743" alt="" />
+          </div>
+          <div class="img_container">
+            <img src="https://picsum.photos/300/200?random=34563753" alt="" />
+          </div>
+          <div class="img_container">
+            <img
+              src="https://picsum.photos/300/200?random=45245435235"
+              alt=""
+            />
+          </div>
         </div>
       </div>
+      <div id="image_row">
+        <div id="centered_div">
+          <div class="img_container" style="margin-left: 0px">
+            <img src="https://picsum.photos/300/200?random=23543225" alt="" />
+          </div>
+          <div class="img_container">
+            <img src="https://picsum.photos/300/200?random=2355435" alt="" />
+          </div>
+          <div class="img_container">
+            <img src="https://picsum.photos/300/200?random=34" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- End of image rows -->
     </main>
-    <div id="footer">
-      <h2>Footer</h2>
-    </div>
   </body>
 </html>
