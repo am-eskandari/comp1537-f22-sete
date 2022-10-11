@@ -165,3 +165,16 @@ clear: left;
     font-size: 0.875em; 
 
 }
+
+@media screen and (max-width: 600px) {
+    section {
+        width: 100%;
+        float: none;
+    }
+
+    aside {
+        width: 100%;
+        float: none;
+    }
+
+    }
