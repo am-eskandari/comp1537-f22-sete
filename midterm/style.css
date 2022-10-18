@@ -4,16 +4,15 @@ body {
 }
 
 #nav-bar {
-    position: fixed;
     width: 100%;
     background: rgba(255, 255, 255, .97);
     box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .15);
     border-bottom: solid grey 1px;
     box-sizing: border-box;
     height: fit-content;
-
-
-
+    display: block;
+    padding: 30px 0;
+    text-align: center;
 }
 
 nav a {
@@ -24,8 +23,8 @@ nav a {
 }
 
 a:hover {
-    background-color: grey;
-    color: black;
+    background-color: black;
+    color: white;
 }
 
 #right-nav {
@@ -101,14 +100,13 @@ footer {
     }
 
 
-    .story_card
-    {
+    .story_card {
         width: 100%;
         clear: both;
         align-items: center;
         flex-direction: column;
-            display: flex;  
-            box-sizing: border-box;
+        display: flex;
+        box-sizing: border-box;
     }
 
     #page-title,
@@ -121,6 +119,7 @@ footer {
         align-items: center;
         flex-direction: column;
         display: flex;
+        width: 100%;
 
     }
 
