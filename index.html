@@ -2,25 +2,95 @@
 <html lang="en">
 
 <head>
+  <!-- Basic -->
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home</title>
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <title>Amir Eskandari</title>
 </head>
 
 <body>
-  Hi, this is my site home page.
+  <div class="hero-image">
+    <div class="hero-text">
+      <h1>Amir Eskandari's Web Dev Library</h1>
+      <p>BCIT CST 2022</p>
+      <!-- <button>Check My Projects</button> -->
+    </div>
+  </div>
 
-  <ul>
-    <li><a href="Lab02/lab02.html"> Lab 2. Yay!</a></li>
-    <li><a href="Lab03/lab03.html"> Lab 3. Phew!</a></li>
-    <li><a href="Lab04/lab04.html"> Lab 4. Nice!</a></li>
-    <li>
-      <a href="/assignment01/assignment01.html"> Assignment 01. Oof! </a>
-    </li>
-    <li><a href="Lab05/lab05.html"> Lab 5. Katching!</a></li>
-    <li><a href="midterm/midterm.html"> Midterm</a></li>
-  </ul>
+
+  <!-- NAVBAR -->
+  <div class="topnav" id="myTopnav">
+    <a href="#home" class="active">Home</a>
+    <a href="#news">N/A</a>
+    <a href="#contact">N/A</a>
+    <a href="#about">N/A</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+
+  <div class="row">
+
+
+    <!-- sidebar starts -->
+    <aside>
+      <h2>About Me</h2>
+      <img src="https://preview.redd.it/z5evodhto2s51.jpg?auto=webp&s=07e49484ac5294e637778487bca67de80d61e23b"
+        alt="lucifer" style="height:200px;">
+      <h5>Amir Eskandari</h5>
+      <p>Currently a CST Diploma student at BCIT :)</p>
+      <p>I'm learning Python, html, CSS and javascript</p>
+
+      <br>
+
+      <!-- social links -->
+      <h3>Where you can find me:</h3>
+      <div class=" fakeimg" style="height:60px;">
+        <a href="https://github.com/am-eskandari">GitHub</a>
+      </div>
+    </aside>
+    <!-- side bar ends-->
+
+
+    <!-- Main section starts -->
+    <main>
+      <h2>[Fall 2022] COMP 1537 Projects...</h2>
+      <h5>Updated, Oct 23, 2022</h5>
+      <div class="fakeimg" style="height:auto;">
+        <h3>Here is the list of my works from web development class: </h3>
+        <h4>Labs</h4>
+        <ul>
+          <li><a href="Lab02/lab02.html"> Lab 2</a></li>
+          <li><a href="Lab03/lab03.html"> Lab 3</a></li>
+          <li><a href="Lab04/lab04.html"> Lab 4</a></li>
+          <li><a href="Lab05/lab05.html"> Lab 5</a></li>
+        </ul>
+        <h4>Assignments</h4>
+        <ul>
+          <li><a href="/assignment01/assignment01.html"> Assignment 01</a></li>
+        </ul>
+        <h4>Exams</h4>
+        <ul>
+          <li><a href="midterm/midterm.html"> Midterm</a></li>
+        </ul>
+      </div>
+    </main>
+
+    <footer>
+      Copyright © Amir's Website 2022
+    </footer>
+  </div>
 </body>
 
 </html>
