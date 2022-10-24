@@ -5,8 +5,35 @@ https: //www.w3schools.com/howto/howto_make_a_website.asp */
 body,
 html {
     height: 100%;
+    margin: 0px;
+
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: normal;
+    margin: auto;
+}
+
+p {
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
+    margin: auto;
+    font-weight: lighter;
+    font-size: small;
+
+}
+
+li {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    font-weight: lighter;
+    font-size: smaller;
 }
 
 * {
@@ -74,7 +101,7 @@ html {
 /* Add an active class to highlight the current page */
 .topnav a.active {
     background-color: wheat;
-    color: white;
+    color: rgb(172, 172, 172);
 }
 
 /* Hide the link that should open and close the topnav on small screens */
@@ -84,6 +111,24 @@ html {
 
 /* Topnav ends */
 
+.card a {
+    display: block;
+    padding: 15px;
+    margin: 10px;
+    text-decoration: none;
+    color: #333333;
+    background-color: rgb(172, 172, 172);
+    border-radius: 10px;
+    width: auto;
+}
+
+.card a:hover {
+    background-color: wheat;
+}
+
+.card {
+    display: block;
+}
 
 /* Column container */
 .row {
@@ -114,9 +159,8 @@ main {
     padding: 20px;
 }
 
-/* Fake image, just for this example */
-.fakeimg {
-    background-color: #aaa;
+.background-card {
+    background-color: #f1f1f1;
     width: 100%;
     padding: 20px;
 }
@@ -129,7 +173,7 @@ footer {
     left: 0;
     width: 100vw;
     height: auto;*/
-
+    width: 100%;
     display: block;
     background: #333333;
     color: #f2f2f2;
@@ -140,14 +184,14 @@ footer {
 }
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1200px) {
     .row {
         flex-direction: column;
     }
 }
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
     .navbar a {
         float: none;
         width: 100%;
