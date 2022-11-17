@@ -37,3 +37,22 @@ display_page = () => {
         }
     )
 }
+setup = function () {
+    PAGE_SIZE = $("#pageSizeMenu option:selected").val();
+
+    $("#search_btn").click(() => {
+        display_page()
+    })
+
+    $("#pageSizeMenu").change(() => {
+        // PAGE_SIZE = $("#pageSizeMenu").val();
+        PAGE_SIZE = $("#pageSizeMenu option:selected").val();
+
+        console.log("PAGE_SIZE", PAGE_SIZE);
+    })
+
+
+
+
+
+    $(document).ready(setup)
