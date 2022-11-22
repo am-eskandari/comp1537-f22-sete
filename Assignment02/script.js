@@ -19,7 +19,7 @@ display_page = () => {
             success: function (data) {
                 let start_index = Number(PAGE_SIZE) * Number((CURRENT_PAGE - 1));
                 let end_index = Number(PAGE_SIZE) * Number((CURRENT_PAGE - 1)) + Number(PAGE_SIZE);
-                MOVIE_PAGES = data.results.length / PAGE_SIZE;
+                MOVIE_PAGES = Math.ceil(data.results.length / PAGE_SIZE);
                 console.log(start_index)
                 console.log(end_index)
                 for (i = 0; i < MOVIE_PAGES; i++) {
@@ -94,11 +94,20 @@ setup = function () {
     $("#pagination_div").on("click", "#next_btn", function () {
         CURRENT_PAGE = Number(CURRENT_PAGE) + 1
         display_page()
-        if (CURRENT_PAGE >= MOVIE_PAGES) {
+        if (CURRENT_PAGE > MOVIE_PAGES) {
             CURRENT_PAGE = Number(CURRENT_PAGE) - 1
         }
     })
 
+    $("#pagination_div").on("click", "#first_btn", function () {
+        CURRENT_PAGE = 1
+        display_page()
+    })
+
+    $("#pagination_div").on("click", "#last_btn", function () {
+        CURRENT_PAGE = MOVIE_PAGES
+        display_page()
+    })
 
     $("body").on("click", ".backdropBtn", function () {
         console.log(`https://image.tmdb.org/t/p/w500/${$(this).attr('movieBackdropImageName')}`);
