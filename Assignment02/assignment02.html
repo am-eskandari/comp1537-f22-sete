@@ -24,6 +24,12 @@
             width: 70%;
             padding-left: 10px;
         }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
     </style>
 </head>
 
@@ -32,21 +38,25 @@
         <div id="pagination_div">
             <label for="pageSizeMenu">Display</label>
             <select name="pageSizeMenu" id="pageSizeMenu">
+                <option value="3">3 movies</option>
                 <option value="5">5 movies</option>
-                <option value=10">10 movies</option>
+                <option value="10">10 movies</option>
                 <option value="20">20 movies</option>
             </select>
             <br>
             <label for="searchTerm">Search movies: </label>
-            <input type="text" name="searchTerm">
+            <input type="text" name="searchTerm" id="searchTerm">
             <br>
             <br>
-            <button id="prev_btn">Prev</button>
-            <!-- <p>buttons to be added</p> -->
-            <button id="next_btn">Next</button>
+            <button id="first_btn" style="display: none;">First</button>
+            <button id="prev_btn" style="display: none;">Prev</button>
+            <div id="num_btn"></div>
+            <button id="next_btn" style="display: none;">Next</button>
+            <br>
+            <button id="last_btn" style="display: none;">Last</button>
             <button id="search_btn">Search!</button>
         </div>
-
+        <div id="searchResult"> </div>
     </main>
     <aside></aside>
 
