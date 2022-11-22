@@ -62,6 +62,8 @@ setup = function () {
     PAGE_SIZE = $("#pageSizeMenu option:selected").val();
 
     $("#search_btn").click(() => {
+        $("#first_btn").css("display", "inline")
+        $("#last_btn").css("display", "inline")
         display_page()
     })
 
@@ -74,18 +76,19 @@ setup = function () {
 
     $("#num_btn").on("click", ".page_numbers", function () {
         CURRENT_PAGE = $(this).text()
-        $("#first_btn").css("display", "inline")
+
         $("#prev_btn").css("display", "inline")
         $("#num_btn").css("display", "inline")
         $("#next_btn").css("display", "inline")
-        $("#last_btn").css("display", "inline")
+
         display_page();
 
     })
 
+
     $("#pagination_div").on("click", "#prev_btn", function () {
         CURRENT_PAGE = Number(CURRENT_PAGE) - 1
-        if (CURRENT_PAGE <= 0) {
+        if (CURRENT_PAGE < 1) {
             CURRENT_PAGE = Number(CURRENT_PAGE) + 1
         }
         display_page()
