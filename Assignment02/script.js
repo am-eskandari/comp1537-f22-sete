@@ -35,9 +35,12 @@ display_page = () => {
                     $("#searchResult").append(
                         `
                             <div>
-                            ${data.results[i].title}
+                            <br>
+                            #${i + 1}
+                            <br>
+                            Title: ${data.results[i].title}
                             <p>
-                                ${data.results[i].overview}
+                                Description: ${data.results[i].overview}
                             </p>
                             <img 
                                 src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}"
@@ -68,7 +71,6 @@ setup = function () {
     })
 
     $("#pageSizeMenu").change(() => {
-        // PAGE_SIZE = $("#pageSizeMenu").val();
         PAGE_SIZE = $("#pageSizeMenu option:selected").val();
         display_page();
     })
