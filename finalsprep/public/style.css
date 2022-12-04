@@ -1,0 +1,17 @@
+table {
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid;
+}
+
+hr {
+color: rgb(226, 226, 226);
+}
+
+.red {
+  background-color: tomato;
+}
