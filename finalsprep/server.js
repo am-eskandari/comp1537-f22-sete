@@ -95,5 +95,7 @@ app.post('/getUnicornByFavFoodRoute', (req, res) => {
         });
 });
 
+
+
 //express.static is used to serve static files such as images, CSS files, and JavaScript files
 app.use(express.static('./public'));

@@ -7,27 +7,44 @@ function setup() {
             type: "POST",
             data: { unicornNameInHTTPBody: $("#unicornNameInHTML").val() },
             success: function (data) {
-                console.log("data", data);
+                // console.log("data", data);
                 receivedArray = data;
-                // result = "";
-                // result = "<table>"
-                // data.map((aUnicorn) => {
-                //     console.log("aUnicorn", aUnicorn);
-                //     if (aUnicorn["vaccinated"] == true)
-                //         result += `<tr class="red">`
-                //     else
-                //         result += `<tr class="">`
+                result = "";
+                result = "<table>"
+                //get all the keys in a database using map function
+                result += `<tr>`
+                let keys = []
+                for (let i = 0; i < data.length; i++) {
+                    let currentKeys = Object.keys(data[i])
+                    // console.log("currentKeys", currentKeys);
+                    for (let j = 0; j < currentKeys.length; j++) {
+                        if (!keys.includes(currentKeys[j]))
+                            keys.push(currentKeys[j])
+                    }
+                }
+                for (let k = 0; k < keys.length; k++) {
+                    result += `<th>${keys[k]}</th>`
 
-                //     for (var field in aUnicorn) {
-                //         result += `<td>${aUnicorn[field]}</td>`
-                //     }
-                //     result += `</tr>`
-                // })
-                // result += "</table>"
+                }
+                result += `</tr>`
+
+                data.map((aUnicorn) => {
+                    // console.log("aUnicorn", aUnicorn);
+                    if (aUnicorn["vaccinated"] == true)
+                        result += `<tr class="red">`
+                    else
+                        result += `<tr class="">`
+
+                    for (var field in aUnicorn) {
+                        result += `<td>${aUnicorn[field]}</td>`
+                    }
+                    result += `</tr>`
+                })
+                result += "</table>"
 
                 // $("#result").html(JSON.stringify(data));
-                // $("#result").html(result);
-                $("#result").html(JSON.stringify(receivedArray, undefined, 2));
+                $("#result").html(result);
+                // $("#result").html(JSON.stringify(receivedArray, undefined, 2));
             }
         });
     })
@@ -41,27 +58,43 @@ function setup() {
                 maxWeightInHTTPBody: $("#maxWeightInHTML").val()
             },
             success: function (data) {
-                console.log("data", data);
                 receivedArray = data;
-                // result = "";
-                // result = "<table>"
-                // data.map((aUnicorn) => {
-                //     console.log("aUnicorn", aUnicorn);
-                //     if (aUnicorn["vaccinated"] == true)
-                //         result += `<tr class="red">`
-                //     else
-                //         result += `<tr class="">`
+                result = "";
+                result = "<table>"
+                //get all the keys in a database using map function
+                result += `<tr>`
+                let keys = []
+                for (let i = 0; i < data.length; i++) {
+                    let currentKeys = Object.keys(data[i])
+                    // console.log("currentKeys", currentKeys);
+                    for (let j = 0; j < currentKeys.length; j++) {
+                        if (!keys.includes(currentKeys[j]))
+                            keys.push(currentKeys[j])
+                    }
+                }
+                for (let k = 0; k < keys.length; k++) {
+                    result += `<th>${keys[k]}</th>`
 
-                //     for (var field in aUnicorn) {
-                //         result += `<td>${aUnicorn[field]}</td>`
-                //     }
-                //     result += `</tr>`
-                // })
-                // result += "</table>"
+                }
+                result += `</tr>`
+
+                data.map((aUnicorn) => {
+
+                    if (aUnicorn["vaccinated"] == true)
+                        result += `<tr class="red">`
+                    else
+                        result += `<tr class="">`
+
+                    for (var field in aUnicorn) {
+                        result += `<td>${aUnicorn[field]}</td>`
+                    }
+                    result += `</tr>`
+                })
+                result += "</table>"
 
                 // $("#result").html(JSON.stringify(data));
-                // $("#result").html(result);
-                $("#result").html(JSON.stringify(receivedArray, undefined, 2));
+                $("#result").html(result);
+                // $("#result").html(JSON.stringify(receivedArray, undefined, 2));
             }
         });
     })
@@ -80,27 +113,44 @@ function setup() {
                 foodInHTTPBody: foods
             },
             success: function (data) {
-                console.log("data", data);
+                // console.log("data", data);
                 receivedArray = data;
-                // result = "";
-                // result = "<table>"
-                // data.map((aUnicorn) => {
-                //     console.log("aUnicorn", aUnicorn);
-                //     if (aUnicorn["vaccinated"] == true)
-                //         result += `<tr class="red">`
-                //     else
-                //         result += `<tr class="">`
+                result = "";
+                result = "<table>"
+                //get all the keys in a database using map function
+                result += `<tr>`
+                let keys = []
+                for (let i = 0; i < data.length; i++) {
+                    let currentKeys = Object.keys(data[i])
+                    // console.log("currentKeys", currentKeys);
+                    for (let j = 0; j < currentKeys.length; j++) {
+                        if (!keys.includes(currentKeys[j]))
+                            keys.push(currentKeys[j])
+                    }
+                }
+                for (let k = 0; k < keys.length; k++) {
+                    result += `<th>${keys[k]}</th>`
 
-                //     for (var field in aUnicorn) {
-                //         result += `<td>${aUnicorn[field]}</td>`
-                //     }
-                //     result += `</tr>`
-                // })
-                // result += "</table>"
+                }
+                result += `</tr>`
+
+                data.map((aUnicorn) => {
+                    // console.log("aUnicorn", aUnicorn);
+                    if (aUnicorn["vaccinated"] == true)
+                        result += `<tr class="red">`
+                    else
+                        result += `<tr class="">`
+
+                    for (var field in aUnicorn) {
+                        result += `<td>${aUnicorn[field]}</td>`
+                    }
+                    result += `</tr>`
+                })
+                result += "</table>"
 
                 // $("#result").html(JSON.stringify(data));
-                // $("#result").html(result);
-                $("#result").html(JSON.stringify(receivedArray, undefined, 2));
+                $("#result").html(result);
+                // $("#result").html(JSON.stringify(receivedArray, undefined, 2));
             }
         });
     })
@@ -109,10 +159,27 @@ function setup() {
     //functions that filters the results by name or weight
     $(".filterBoth").change(function () {
         if ($("#nameFilter").prop("checked") && $("#weightFilter").prop("checked")) {
-            anotherArray = receivedArray.map((item) => {
-                return [item.name, item.weight];
-            })
-            $("#result").html(JSON.stringify(anotherArray, undefined, 2));
+            let name = receivedArray.name;
+            let weight = receivedArray.weight;
+            console.log(receivedArray);
+            result = "";
+            result = "<table>"
+            //get all the keys in a database using map function
+            result += `<tr>`
+            result += `<th>Name</th>`
+            result += `<th>Weight</th>`
+            result += `</tr>`
+            // console.log(name);
+            // console.log(weight);
+            for (let i = 0; i < name.length; i++) {
+                result += `<tr>`
+                result += `<td>${name[i]}</td>`
+                result += `<td>${weight[i]}</td>`
+                result += `</tr>`
+            }
+            result += "</table>"
+
+            $("#result").html(result);
 
         }
         else if ($("#nameFilter").prop("checked")) {

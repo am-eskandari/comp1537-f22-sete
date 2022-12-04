@@ -1,61 +1,66 @@
-// db.users.insert({ // Create in CRUD
-//     name: "NAbil", 
-//     age: 25,
-//     status:   "A"
-// })
+// // db.users.insert({ // Create in CRUD
+// //     name: "NAbil", 
+// //     age: 25,
+// //     status:   "A"
+// // })
 
-// db.users.find({}, {name: 1, _id: 0}) // Read in CRUD (projection criteria 1 means show, 0 means hide)
-// db.users.find({}, {})
-// db.users.update(
-//   {}, // selection criteria blank means all object
-//   {$set : {"gpa": "A+"}}, 
-//   {multi: true} // if there's multi, it will update all the object
-//   )
+// // db.users.find({}, {name: 1, _id: 0}) // Read in CRUD (projection criteria 1 means show, 0 means hide)
+// // db.users.find({}, {})
+// // db.users.update(
+// //   {}, // selection criteria blank means all object
+// //   {$set : {"gpa": "A+"}}, 
+// //   {multi: true} // if there's multi, it will update all the object
+// //   )
 
-// db.users.update( // Update in CRUD
-//   {name: "John"},
-//   {$set: 
-//     {
-//       "age": 19,
-//       "status": "B"
-//     }
-//   },
-//   {multi: false} // if there's multi, it will update only the first object
-// ) 
+// // db.users.update( // Update in CRUD
+// //   {name: "John"},
+// //   {$set: 
+// //     {
+// //       "age": 19,
+// //       "status": "B"
+// //     }
+// //   },
+// //   {multi: false} // if there's multi, it will update only the first object
+// // ) 
 
-// db.users.update(
-//   {
+// // db.users.update(
+// //   {
   
-//   },{
-//     $unset: {gpa: 1} // 1 means delete the field gpa
-//   },{
-//     multi: true
-//   }
-// )
+// //   },{
+// //     $unset: {gpa: 1} // 1 means delete the field gpa
+// //   },{
+// //     multi: true
+// //   }
+// // )
 
-// db.users.update(
-//   {},{
-//     $set: {"courses": []}
-//   },{
-//     multi: true
-//   }
-// )
+// // db.users.update(
+// //   {},{
+// //     $set: {"courses": []}
+// //   },{
+// //     multi: true
+// //   }
+// // )
 
 
 
-// SOURCES
-// https://www.mongodb.com/docs/manual/crud/
-// https://www.mongodb.com/docs/manual/reference/operator/update/
-db.users.find({ //finds specific object criteria
-  "age" : { $gt: 20} // $gt means greater than, $ means operator
-}, {})
+// // SOURCES
+// // https://www.mongodb.com/docs/manual/crud/
+// // https://www.mongodb.com/docs/manual/reference/operator/update/
+// db.users.find({ //finds specific object criteria
+//   "age" : { $gt: 20} // $gt means greater than, $ means operator
+// }, {})
 
-db.users.update({"name": "John"},{
-  $push: {"courses": "Java" } // $push means add to the array
-},{multi: false})
+// db.users.update({"name": "John"},{
+//   $push: {"courses": "Java" } // $push means add to the array
+// },{multi: false})
 
-db.users.find()
+// db.users.find()
 
-// db.users.remove( // Delete in CRUD
-//   {name: "Nabil"},
-//   {}) 
+// // db.users.remove( // Delete in CRUD
+// //   {name: "Nabil"},
+// //   {}) 
+
+db.unicorns.update(
+  {},
+  {$set: {"vaccinated" : true}},  {multi: true}
+)
