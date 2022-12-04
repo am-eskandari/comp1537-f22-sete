@@ -105,37 +105,4 @@ function setup() {
         });
     })
 
-    //functions that filters the results by name or weight
-    $(".filterBoth").change(function () {
-        if ($("#nameFilter").prop("checked") && $("#weightFilter").prop("checked")) {
-            anotherArray = receivedArray.map((item) => {
-                return [item.name, item.weight];
-            })
-            $("#result").html(JSON.stringify(anotherArray, undefined, 2));
-
-        }
-        else if ($("#nameFilter").prop("checked")) {
-            anotherArray = receivedArray.map((item) => {
-                return item.name;
-            })
-            $("#result").html(JSON.stringify(anotherArray, undefined, 2));
-        }
-        else if ($("#weightFilter").prop("checked")) {
-            anotherArray = receivedArray.map((item) => {
-                return item.weight;
-            })
-            $("#result").html(JSON.stringify(anotherArray, undefined, 2));
-        }
-        else {
-            anotherArray = receivedArray.map((item) => {
-                return item;
-            })
-            $("#result").html(JSON.stringify(anotherArray, undefined, 2));
-
-        }
-    })
-}
-
-
-$(document).ready(setup)
 
