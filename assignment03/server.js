@@ -52,3 +52,48 @@ app.get('/unicorns', (req, res) => {
         res.send(data);
     });
 });
+
+// these are middleware that helps you encode the data
+app.use(express.urlencoded());
+app.use(express.json());
+
+// get by name route
+app.post('/getUnicornByNameRoute', (req, res) => {
+    console.log(req.body);
+    unicornModel.find({ name: req.body.unicornNameInHTTPBody }, (err, data) => {
+        if (err) console.log(err);
+        res.send(data);
+    });
+});
+
+// get by weight route
+app.post('/getUnicornByWeightRoute', (req, res) => {
+    console.log(req.body);
+    unicornModel.find(
+        {
+            weight: {
+                $gte: req.body.minWeightInHTTPBody,
+                $lte: req.body.maxWeightInHTTPBody
+            },
+        },
+        (err, data) => {
+            if (err) console.log(err);
+            res.send(data);
+        });
+});
+
+// get by weight route
+app.post('/getUnicornByFavFoodRoute', (req, res) => {
+    console.log(req.body);
+    unicornModel.find(
+        {
+            loves: { $all: req.body.foodInHTTPBody }
+        },
+        (err, data) => {
+            if (err) console.log(err);
+            res.send(data);
+        });
+});
+
+//express.static is used to serve static files such as images, CSS files, and JavaScript files
+app.use(express.static('./public'));
