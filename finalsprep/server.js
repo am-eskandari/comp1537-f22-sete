@@ -3,6 +3,13 @@ const { urlencoded } = require('express');
 const express = require('express');
 const app = express();
 
+// these are middleware that helps you encode the data
+app.use(express.urlencoded());
+app.use(express.json());
+
+//create a model, make sure the collection name is plural
+const unicornModel = mongoose.model('unicorns', unicornsSchema);
+
 app.listen(5000, (err) => {
     if (err) console.log(err);
     console.log('Server is running on port 5000');
@@ -42,8 +49,6 @@ const unicornsSchema = new mongoose.Schema({
     vaccinated: Boolean
 });
 
-//create a model, make sure the collection name is plural
-const unicornModel = mongoose.model('unicorns', unicornsSchema);
 
 //new get route
 app.get('/unicorns', (req, res) => {
@@ -53,9 +58,6 @@ app.get('/unicorns', (req, res) => {
     });
 });
 
-// these are middleware that helps you encode the data
-app.use(express.urlencoded());
-app.use(express.json());
 
 // get by name route
 app.post('/getUnicornByNameRoute', (req, res) => {
